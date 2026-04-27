@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalPortfolio</title>
+    <script src="https://kit.fontawesome.com/4aa05a145e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+   
+   <style>
+    /* ===============================
+   GOOGLE FONTS
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+/* ===============================
+   RESET
+================================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f6f3ec;
+  color:#1f2937;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* ===============================
+   CONTAINER / SECTION
+================================= */
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+.section{
+  padding:45px 0;
+  scroll-margin-top:90px;
+}
+
+.title{
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;
+  text-align:center;
+  margin-bottom:45px;
+  color:#854836;
+}
+
+.title span{
+  color:#4F4A45;
+}
+
+.muted{
+  color:#4b5563;
+}
+
+/* ===============================
+   HEADER / NAVBAR
+================================= */
+header{
+  position:sticky;
+  top:0;
+  z-index:99;
+  background:#9AB17A);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e5e7eb;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;
+}
+
+nav ul{
+  display:flex;
+  gap:26px;
+  list-style:none;
+}
+
+nav ul li a{
+  font-size:.95rem;
+  font-weight:500;
+  color:#475569;
+  transition:.3s;
+}
+
+nav ul li a:hover{
+  color:#d9a3a3;
+}
+
+/* ===============================
+   LOGO
+================================= */
+.brand-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#d9a3a3;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:1rem;
+}
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.logo-text span{
+  font-size:.95rem;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+/* ===============================
+   HERO
+================================= */
+.hero{
+  background:#dfe9e2;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+
+.hero-wrap{
+  display:grid;
+  grid-template-columns:1fr 380px 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.hero-left small{
+  display:block;
+  font-size:.85rem;
+  letter-spacing:2px;
+  color:#6b7280;
+  margin-bottom:12px;
+}
+
+.main-title{
+  font-family:'Playfair Display',serif;
+  font-size:4rem;
+  line-height:1.1;
+  color:#464159;
+  margin-bottom:14px 0;
+}
+
+.main-title span{
+display:inline;      
+  white-space:nowrap; 
+  color:#16476A;}
+
+.hero-text{
+   max-width:520px;
+  color:#4b5563;
+  font-size:1rem;
+  margin:15px 0 25px;
+
+}
+
+/* HERO IMAGE */
+.hero-img{
+  width:100%;
+  max-width:360px;
+  margin:auto;
+  border-radius:22px;
+  border:1px solid #ffffff;
+  box-shadow:0 20px 45px rgba(0,0,0,.12);
+  object-fit:cover;
+}
+
+/* TAGLINE */
+.tagline{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  text-align:left;
+}
+
+.tagline .line{
+  display:block;
+  font-size:3.5rem;
+  font-weight:700;
+  line-height:1.15;
+  color:#355872;
+  white-space: nowrap;
+ font-family: "Playfair Display", serif!important;
+ font-style: italic;
+   font-optical-sizing: auto;
+
+}
+.tagline .line:nth-child(2){
+  color:#355872;
+}
+.hero-buttons{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  margin-top:28px;
+  flex-wrap:nowrap;
+}
+.hero-buttons a{
+  min-width:150px;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+.actions{
+   margin:0;
+
+}
+
+.btn,
+.cv-btn{
+  padding:12px 24px;
+  border-radius:999px;
+  font-size:.95rem;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.btn{
+  background:5C766D#215B63;
+  color:#1f2937;
+}
+
+.btn.outline{
+  background:#215B63;
+  color:#fff;
+}
+
+.cv-btn{
+  background:#215B63;
+  color:#e9ebed;
+}
+.about-btn{
+  background:#215B63;
+  color:#f7f8f9;
+}
+
+.project-btn{
+  background:#215B63;
+  color:#ffffff;
+}
+.btn:hover,
+.cv-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* ===============================
+   CARD / GRID
+================================= */
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+.card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+/* ===============================
+   TIMELINE
+================================= */
+.timeline-sub {
+  text-align: center;
+  color: #6b7280;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+/* vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dfe9e2;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+/* circle icon on the line */
+.timeline-icon {
+  position: absolute;
+  left: -48px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #215B63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #215B63;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.timeline-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  transition: transform 0.25s;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.timeline-header h3 {
+  font-size: 1.05rem;
+  color: #1f2937;
+}
+
+.timeline-date {
+  background: #dfe9e2;
+  color: #215B63;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.timeline-company {
+  color: #215B63;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+  .timeline {
+    padding-left: 45px;
+  }
+  .timeline-icon {
+    left: -40px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+/* ABOUT TAG */
+.tag{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;
+  font-style: italic;
+  margin-bottom:16px;
+  color:#4B2E2B;
+}
+
+/* ===============================
+   PROJECTS
+================================= */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:24px;
+  align-items: stretch;
+}
+
+.project{
+  background:#ffffff;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.project-image{
+  background:#f8fafc;
+  overflow:hidden;
+  margin-bottom:16px;
+  width:100%;
+  height:220px;
+  border-radius:12px;
+}
+
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.project h3{
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+
+/* ===============================
+   SKILLS
+================================= */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+}
+
+.skill-group{
+  background:#ffffff;
+  border-radius:18px;
+  padding:26px;
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+}
+
+.skill-group h3{
+  margin-bottom:16px;
+  font-size:1.15rem;
+}
+
+.skill-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skill-list span{
+  background:#f4f4f5;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:.85rem;
+  color:#4b5563;
+}
+
+/* ===============================
+   CONTACT
+================================= */
+.contact-box{
+  max-width:760px;
+  margin:auto;
+  text-align:center;
+}
+
+.contact-box p{
+  margin-bottom:16px;
+}
+
+.contact-actions{
+  margin:18px 0;
+}
+
+.mail-btn{
+  background:#d9a3a3;
+  color:#fff;
+}
+.email-link{
+  color:#f47575;
+  font-weight:500;
+}
+
+.contact-social{
+  margin-top:18px;
+}
+
+.touch-btn{
+  background:#c0e1d2;
+  padding:12px 24px;
+  border-radius:999px;
+  font-weight:600;
+}
+
+.social-icons{
+  margin-top:22px;
+  display:flex;
+  justify-content:center;
+  gap:16px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#ffffff;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#475569;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.footer{
+  background:#FFB2B2;
+  color:#374151;
+  text-align:center;
+  padding:25px 0;
+  font-size:.9rem;
+  margin-top:20px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media(max-width:992px){
+
+  nav ul{
+    display:none;
+  }
+
+  .hero-wrap{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-text{
+    margin:auto auto 24px;
+  }
+
+  .tagline{
+    text-align:center;
+  }
+
+  .actions{
+    justify-content:center;
+  }
+
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .main-title{
+    font-size:3rem;
+  }
+
+  .tagline .line{
+    font-size:2.4rem;
+  }
+}
+
+@media(max-width:576px){
+
+  .section{
+    padding:70px 0;
+  }
+
+  .main-title{
+    font-size:2.4rem;
+  }
+
+  .hero-img{
+    max-width:280px;
+  }
+
+  .title{
+    font-size:2rem;
+  }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" >
+        <nav>
+            <div class="brand-logo">
+  <div class="logo-icon">U</div>
+  <div class="logo-text">
+    <span>UMMAY</span>
+    <span>SAIMA</span>
+  </div>
+</div>
+            <ul> 
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+     </div>
+    </header>
+   <section class="hero" id="home">
+  <div class="container">
+
+    <div class="hero-wrap">
+
+      <div class="hero-left">
+        <small>WELCOME TO MY WORLD</small>
+
+        <h1 class="main-title">
+          Hi, I'm <span>Ummay Saima</span>
+        </h1>
+
+        <p class="hero-text">
+          I design and build modern, responsive websites with clean UI and smooth user experience.
+        </p>
+      </div>
+
+      <div class="hero-center">
+        <img class="hero-img" src="image.png" alt="Ummay Saima">
+      </div>
+
+      <div class="hero-right">
+        <div class="tagline">
+          <span class="line">Code clean.</span>
+          <span class="line">Design bold.</span>
+          <span class="line">Launch strong.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-buttons">
+  <a class="btn about-btn" href="#about">About Me</a>
+  <a class="btn project-btn" href="#project">Projects</a>
+  <a class="btn outline" href="#contact">Contact</a>
+  <a href="cv.pdf" download class="cv-btn">Download CV</a>
+</div>
+
+  </div>
+</section>
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="title">About Me</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="tag">Turning Ideas Into Digital Reality</h3>
+                    <p class="muted">I am a passionate Web Developer dedicated to crafting modern, high-performing, and visually engaging websites that deliver real impact. I specialize in building responsive interfaces, seamless user experiences, and clean, scalable solutions that blend creativity with functionality. Somewhere between writing code and debugging, I’ve learned that computers always wait for the worst moment to become dramatic. I enjoy transforming ideas into polished digital products and solving challenges through smart design, efficient code, and attention to detail.
+</p>
+                </div>
+                <div class='card'>
+ <h2 class="title"><span>Experience & Education</span></h2>
+    <p class="timeline-sub">My journey in Web Development.</p>
+
+    <div class="timeline">
+
+      <!-- EXPERIENCE ITEM -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>Junior Web Developer</h3>
+            <span class="timeline-date"> – Present</span>
+          </div>
+          <p class="timeline-company">AcadexLab</p>
+          <p class="muted"><b>Where design meets logic —</b> I build modern, high-performing 
+web applications with responsive interfaces, clean backends, 
+and user experiences that actually feel good to use.</p>
+        </div>
+      </div>
+
+      <!-- EDUCATION ITEM -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>B.Sc. in Computer Science & Engineering</h3>
+            <span class="timeline-date">2022 – 2026</span>
+          </div>
+          <p class="timeline-company">IUBAT - International University of Business Agriculture and Technology</p>
+          <p class="muted">Specializing in web technologies, algorithms, and software engineering fundamentals.</p>
+        </div>
+      </div>
+
+    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="project">
+        <div class="container">
+            <h2 class="title">My Projects</h2>
+            <div class="projects">
+                <div class="card project">
+                    <div class="project-gallery two">
+                        <div class="project-image"><img src="ob1.png" alt="Online Bookshop homepage screenshot"></div>
+                        <div class="project-image"><img src="ob2.png" alt="Online Bookshop dashboard screenshot"></div>
+                    </div>
+                    <div>
+                        <h3>Online Bookshop Management</h3>
+                        <p class="muted">A smart e-commerce platform for buying, selling, and reselling books. Includes inventory management, secure ordering, user accounts, seller listings, and an admin dashboard for complete bookstore operations.</p>
+                    </div>
+                </div>
+                <div class="card project">
+                    <div class="project-gallery">
+                        <div class="project-image"><img src="as2.png" alt="Antique Shop Management screenshot"></div>
+                       <div class="project-image"><img src="as1.png" alt="Antique Shop Management screenshot"></div>
+
+                      </div>
+                    <div>
+                        <h3>Antique Shop Management</h3>
+                        <p class="muted">A premium management system for antique stores to manage rare items, inventory, customer orders, valuations, and auctions. Designed for efficient business operations with a modern luxury interface.</p>
+                    </div>
+                </div>
+                <div class="card project">
+                    <div class="project-gallery two">
+                        <div class="project-image"><img src="aa1.png" alt="AuctionArc bidding page screenshot"></div>
+                        <div class="project-image"><img src="aa2.png" alt="AuctionArc management dashboard screenshot"></div>
+                    </div>
+                    <div>
+                        <h3>AuctionArc - Online Bidding System</h3>
+                        <p class="muted">A modern online auction system where buyers can place bids, use auto-bidding, make secure escrow payments, and track orders. Sellers can manage listings, monitor bids, chat with buyers, and handle deliveries, while admins control approvals, disputes, and transactions through a dedicated dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="skill">
+    <div class="container">
+        <div class="title">My Skills</div>
+
+        <div class="skills">
+
+            <!-- Frontend -->
+            <div class="skill-group">
+                <h3>Frontend</h3>
+                <div class="skill-list">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap 5</span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-group">
+                <h3>Backend</h3>
+                <div class="skill-list">
+                    <span>C#</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-group">
+                <h3>Tools</h3>
+                <div class="skill-list">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Figma</span>
+                    <span>Canva</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+       
+    <section class="section" id="contact">
+        <div class="container contact-box">
+            <h2 class="title">Let's Connect</h2>
+            <p class="muted">Feel free to reach out if you have any questions or would like to collaborate!</p>
+            <p>Email: <a class="email-link" href="mailto:ummay1351@gmail.com">ummay1351@gmail.com</a></p>
+            <div class="contact-actions">
+                <a class="btn mail-btn" href="mailto:ummay1351@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Ummay%20Saima,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0D%0A%0D%0AName:%20%0D%0AProject/Message:%20">Send Mail</a>
+            </div>
+            <div class="contact-social">
+
+    <a href="#" class="touch-btn">Get In Touch</a>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+
+</div>
+        </div>
+    </section>
+    <footer class="footer">&copy; 2026 Ummay Saima Portfolio. All rights reserved. </footer>
+</body>
+</html>
